@@ -202,13 +202,13 @@
                 id="exampleFormControlTextarea13"
                 rows="5"
                 placeholder="Message"
-                name="amamentacao_2"
-                v-model="amamentacao_2"
+                name="contato_pele_a_pele"
+                v-model="contato_pele_a_pele"
               ></textarea>
               <label
                 for="exampleFormControlTextarea13"
                 class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
-                >AMAMENTAÇÃO 2
+                >CONTATO PELE A PELE
               </label>
             </div>
 
@@ -252,7 +252,7 @@
           a_mae_deve_se_alimentar_bem: "",
           algumas_posicoes_durante_o_trabalho_de_parto: "",
           amamentacao_1: "",
-          amamentacao_2: "",
+          contato_pele_a_pele: "",
           isSalvando: false,
         },
         mounted: function () {
@@ -286,7 +286,7 @@
               "algumas_posicoes_durante_o_trabalho_de_parto"
             );
             this.amamentacao_1 = this.getData(data, "amamentacao_1");
-            this.amamentacao_2 = this.getData(data, "amamentacao_2");
+            this.contato_pele_a_pele = this.getData(data, "contato_pele_a_pele");
           }
         },
         methods: {

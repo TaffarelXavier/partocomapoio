@@ -43,7 +43,13 @@
   <body class="mt-4 mix-blend-normal">
     <div id="app">
       <template>
-        <div class="pl-5 pr-5 md:pl-60 md:pr-60">
+        <div
+          :class="{'hidden': !isLoaded}"
+          class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-40"
+        >
+          <h1 class="text-3xl text-gray-900">Carregando...</h1>
+        </div>
+        <div class="pl-5 pr-5 md:pl-60 md:pr-60" :class="{'hidden': isLoaded}">
           <div class="bg-white">
             <div class="text-center">
               <h1
@@ -53,7 +59,6 @@
               </h1>
             </div>
           </div>
-
           <!-- INÍCIO -->
           <section class="">
             <div class="grid grid-cols-5 mt-5">
@@ -412,7 +417,7 @@
           </section>
         </div>
         <!-- Footer container -->
-        <footer>
+        <footer :class="{'hidden': isLoaded}">
           <div class="w-full mt-10">
             <!--Copyright section-->
             <div
@@ -464,13 +469,18 @@
           algumas_posicoes_durante_o_trabalho_de_parto: "",
           amamentacao_1: "",
           contato_pele_a_pele: "",
+          isLoaded: true,
         },
         mounted() {
           const self = this;
+
           (async function () {
             try {
               const your_vercel_api_token_here =
                 "6761f3fe-3d58-4bbb-bae4-a2c979e43184";
+
+              self.isLoaded = true;
+
               const createEdgeConfig = await fetch(
                 "https://api.vercel.com/v1/edge-config/ecfg_jkh3mkuexoduiizm1e3vy7djlddp/items",
                 {
@@ -486,7 +496,10 @@
 
               self.titulo = self.getData(result, "titulo");
               self.sub_titulo = self.getData(result, "sub_titulo");
-              self.idade_gestacional = self.getData(result, "idade_gestacional");
+              self.idade_gestacional = self.getData(
+                result,
+                "idade_gestacional"
+              );
               self.dilatacao_do_colo_do_utero = self.getData(
                 result,
                 "dilatacao_do_colo_do_utero"
@@ -512,9 +525,14 @@
                 "algumas_posicoes_durante_o_trabalho_de_parto"
               );
               self.amamentacao_1 = self.getData(result, "amamentacao_1");
-              self.contato_pele_a_pele = self.getData(result, "contato_pele_a_pele");
+              self.contato_pele_a_pele = self.getData(
+                result,
+                "contato_pele_a_pele"
+              );
             } catch (error) {
               console.log(error);
+            } finally {
+              self.isLoaded = false;
             }
           })();
         },
