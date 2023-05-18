@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
+    <title>html5boilerplate Bootstrap com Vue</title>
+  </head>
+  <body>
+    <div>
+      <div id="app">
+        <div
+          class="block rounded-lg bg-white p-6 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-neutral-700"
+        >
+          <form @submit.prevent="salvar">
+            <!--Name input-->
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <input
+                type="text"
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleInput7"
+                placeholder="Name"
+                name="titulo"
+                v-model="titulo"
+              />
+              <label
+                for="exampleInput7"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >Título
+              </label>
+            </div>
+            <!--Message textarea-->
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="sub_titulo"
+                v-model="sub_titulo"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >SUB TÍTULO
+              </label>
+            </div>
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="idade_gestacional"
+                v-model="idade_gestacional"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >IDADE GESTACIONAL
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="dilatacao_do_colo_do_utero"
+                v-model="dilatacao_do_colo_do_utero"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >DILATAÇÃO DO COLO DO ÚTERO
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="sinais_e_sintomas_naturais_esperados"
+                v-model="sinais_e_sintomas_naturais_esperados"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >SINAIS E SINTOMAS NATURAIS ESPERADOS
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="alter_aco_es_emocionais_na_mae"
+                v-model="alter_aco_es_emocionais_na_mae"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >ALTERAÇÕES EMOCIONAIS NA MÃE
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="ajuda_do_acompanhante"
+                v-model="ajuda_do_acompanhante"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >AJUDA DO ACOMPANHANTE
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="a_mae_deve_se_alimentar_bem"
+                v-model="a_mae_deve_se_alimentar_bem"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >A MÃE DEVE SE ALIMENTAR BEM
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="algumas_posicoes_durante_o_trabalho_de_parto"
+                v-model="algumas_posicoes_durante_o_trabalho_de_parto"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >ALGUMAS POSIÇÕES DURANTE O TRABALHO DE PARTO
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="amamentacao_1"
+                v-model="amamentacao_1"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >AMAMENTAÇÃO 1
+              </label>
+            </div>
+
+            <div class="relative mb-6" data-te-input-wrapper-init>
+              <textarea
+                class="peer block min-h-[auto] w-full rounded border-0 bg-transparent px-3 py-[0.32rem] leading-[1.6] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
+                id="exampleFormControlTextarea13"
+                rows="5"
+                placeholder="Message"
+                name="amamentacao_2"
+                v-model="amamentacao_2"
+              ></textarea>
+              <label
+                for="exampleFormControlTextarea13"
+                class="pointer-events-none absolute left-3 top-0 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.37rem] leading-[1.6] text-neutral-500 transition-all duration-200 ease-out peer-focus:-translate-y-[0.9rem] peer-focus:scale-[0.8] peer-focus:text-primary peer-data-[te-input-state-active]:-translate-y-[0.9rem] peer-data-[te-input-state-active]:scale-[0.8] motion-reduce:transition-none dark:text-neutral-200 dark:peer-focus:text-primary"
+                >AMAMENTAÇÃO 2
+              </label>
+            </div>
+
+            <!--Submit button-->
+            <button
+              type="submit"
+              class="dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]] inline-block w-full rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              data-te-ripple-init
+              data-te-ripple-color="light"
+              :disabled="isSalvando"
+            >
+              {{ isSalvando ? 'Salvando...' : 'Salvar' }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          titulo: "",
+          sub_titulo: "",
+          idade_gestacional: "",
+          dilatacao_do_colo_do_utero: "",
+          sinais_e_sintomas_naturais_esperados: "",
+          alter_aco_es_emocionais_na_mae: "",
+          ajuda_do_acompanhante: "",
+          a_mae_deve_se_alimentar_bem: "",
+          algumas_posicoes_durante_o_trabalho_de_parto: "",
+          amamentacao_1: "",
+          amamentacao_2: "",
+          isSalvando: false,
+        },
+        mounted: function () {
+          if (localStorage.getItem("data")) {
+            const data = JSON.parse(localStorage.getItem("data"));
+            this.titulo = this.getData(data, "titulo");
+            this.sub_titulo = this.getData(data, "sub_titulo");
+            this.idade_gestacional = this.getData(data, "idade_gestacional");
+            this.dilatacao_do_colo_do_utero = this.getData(
+              data,
+              "dilatacao_do_colo_do_utero"
+            );
+            this.sinais_e_sintomas_naturais_esperados = this.getData(
+              data,
+              "sinais_e_sintomas_naturais_esperados"
+            );
+            this.alter_aco_es_emocionais_na_mae = this.getData(
+              data,
+              "alter_aco_es_emocionais_na_mae"
+            );
+            this.ajuda_do_acompanhante = this.getData(
+              data,
+              "ajuda_do_acompanhante"
+            );
+            this.a_mae_deve_se_alimentar_bem = this.getData(
+              data,
+              "a_mae_deve_se_alimentar_bem"
+            );
+            this.algumas_posicoes_durante_o_trabalho_de_parto = this.getData(
+              data,
+              "algumas_posicoes_durante_o_trabalho_de_parto"
+            );
+            this.amamentacao_1 = this.getData(data, "amamentacao_1");
+            this.amamentacao_2 = this.getData(data, "amamentacao_2");
+          }
+        },
+        methods: {
+          getData(data, name) {
+            return data.find((el) => el.name === name).value;
+          },
+          salvar(ev) {
+            const self = this;
+            this.isSalvando = true;
+            const data = JSON.stringify($(ev.target).serializeArray());
+            window.localStorage.setItem("data", data);
+            setTimeout(() => {
+              this.isSalvando = false;
+            }, 500);
+          },
+          reverseMessage: function () {
+            this.message = this.message.split("").reverse().join("");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
