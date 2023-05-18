@@ -33,12 +33,6 @@
           :data-te-carousel-active="image.id == 0"
         >
           <img :src="image.src" class="block w-full h-72" alt="..." />
-          <!-- <div
-          class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block"
-        >
-          <h5 class="text-xl">First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
-        </div> -->
         </div>
       </div>
 
