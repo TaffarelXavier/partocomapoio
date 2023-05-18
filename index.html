@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
+    />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          fontFamily: {
+            sans: ["Roboto", "sans-serif"],
+            body: ["Roboto", "sans-serif"],
+            mono: ["ui-monospace", "monospace"],
+          },
+        },
+        corePlugins: {
+          preflight: false,
+        },
+      };
+    </script>
     <title>
       Informações básicas para o acompanhamento durante o trabalho de parto
     </title>
@@ -63,12 +87,14 @@
           <section class="">
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
-                <img
-                  src="assets/image002.jpg"
-                  class="w-100 md:h-80 mx-auto"
-                  alt=""
-                />
+                <!-- COROUSEL -->
+                <my-carousel
+                  id="carousel_1"
+                  :images="[{id:0, src:'assets/introducao/1.jpeg'},
+                  {id:1, src:'assets/introducao/2.jpeg'}]"
+                ></my-carousel>
               </div>
+
               <div
                 class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
               >
@@ -86,12 +112,10 @@
             </h1>
             <div class="grid grid-cols-6 mt-5">
               <div class="col-span-6 md:col-span-6 mb-4">
-                <img
-                  src="assets/cardeneta.png"
-                  class="w-100 md:h-96 text-center m-auto border"
-                  alt=""
-                  style="width: 100% !important"
-                />
+                <my-carousel
+                  id="carousel_2"
+                  :images="[{id:0, src:'assets/cardeneta.png'}]"
+                ></my-carousel>
                 <div class="text-right font-extrabold text-sm text-gray-600">
                   Caderneta da Gestante – Ministério da Saúde/2022
                 </div>
@@ -267,12 +291,11 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
-                <img
-                  src="assets/image007.jpg"
-                  style="width: 100% !important"
-                  class="w-100 md:h-64 mx-auto"
-                  alt=""
-                />
+                <my-carousel
+                  id="carousel_3"
+                  :images="[
+                  {id:0, src:'assets/image007.jpg'}]"
+                ></my-carousel>
               </div>
               <div
                 class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
@@ -291,11 +314,11 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
-                <img
-                  src="assets/image009.jpg"
-                  class="w-100 h-96 md:h-auto mx-auto"
-                  alt=""
-                />
+                <my-carousel
+                  id="carousel_4"
+                  :images="[{id:0, src:'assets/image009.jpg'}, {id:1, src:'assets/emocoes/1.jpeg'},
+                  {id:2, src:'assets/emocoes/2.jpeg'}]"
+                ></my-carousel>
               </div>
               <div
                 class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
@@ -313,15 +336,14 @@
               AJUDA DO ACOMPANHANTE
             </h1>
             <div class="grid grid-cols-5 mt-5">
-              <div class="col-span-5 md:col-span-1">
-                <img
-                  src="assets/marido_esposa_gravida.png"
-                  class="w-full w-auto h-96 md:h-80"
-                  alt=""
-                />
+              <div class="col-span-5 md:col-span-2">
+                <my-carousel
+                  id="carousel_5"
+                  :images="[{id:0, src:'assets/marido_esposa_gravida.png'}]"
+                ></my-carousel>
               </div>
               <div
-                class="col-span-5 md:col-span-4 mt-5 text-xl text-justify md:indent-24 leading-8"
+                class="col-span-5 md:col-span-3 mt-5 md:pl-5 text-xl text-justify md:indent-24 leading-8"
               >
                 {{ ajuda_do_acompanhante }}
               </div>
@@ -337,7 +359,10 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-1">
-                <img src="assets/image013.jpg" class="w-100 mx-auto" alt="" />
+                <my-carousel
+                  id="carousel_6"
+                  :images="[{id:0, src:'assets/image013.jpg'}]"
+                ></my-carousel>
               </div>
               <div
                 class="col-span-5 md:col-span-4 text-xl text-justify md:pl-10 md:indent-24 leading-8"
@@ -356,11 +381,10 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-1">
-                <img
-                  src="assets/image015.jpg"
-                  class="w-100 h-80 md:h-64 mx-auto"
-                  alt=""
-                />
+                <my-carousel
+                  id="carousel_7"
+                  :images="[{id:0, src:'assets/image015.jpg'}]"
+                ></my-carousel>
               </div>
               <div
                 class="col-span-5 md:col-span-4 text-xl text-justify md:pl-10 md:indent-24 leading-8"
@@ -379,16 +403,15 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div
-                class="col-span-5 md:col-span-4 text-xl text-justify md:indent-24 leading-8"
+                class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
               >
                 {{amamentacao_1}}
               </div>
-              <div class="col-span-5 md:col-span-1">
-                <img
-                  src="assets/image017.png"
-                  class="w-100 md:w-96 md:h-72 mx-auto"
-                  alt=""
-                />
+              <div class="col-span-5 md:col-span-2">
+                <my-carousel
+                  id="carousel_8"
+                  :images="[{id:0, src:'assets/image017.png'}]"
+                ></my-carousel>
               </div>
             </div>
           </section>
@@ -402,11 +425,10 @@
             </h1>
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
-                <img
-                  src="assets/image020.png"
-                  class="w-100 md:w-56 mx-auto"
-                  alt=""
-                />
+                <my-carousel
+                  id="carousel_9"
+                  :images="[{id:0, src:'assets/image020.png'}]"
+                ></my-carousel>
               </div>
               <div
                 class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
@@ -453,95 +475,8 @@
         </footer>
       </template>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script>
-      var app = new Vue({
-        el: "#app",
-        data: {
-          titulo: "",
-          sub_titulo: "",
-          idade_gestacional: "",
-          dilatacao_do_colo_do_utero: "",
-          sinais_e_sintomas_naturais_esperados: "",
-          alter_aco_es_emocionais_na_mae: "",
-          ajuda_do_acompanhante: "",
-          a_mae_deve_se_alimentar_bem: "",
-          algumas_posicoes_durante_o_trabalho_de_parto: "",
-          amamentacao_1: "",
-          contato_pele_a_pele: "",
-          isLoaded: true,
-        },
-        mounted() {
-          const self = this;
-
-          (async function () {
-            try {
-              const your_vercel_api_token_here =
-                "6761f3fe-3d58-4bbb-bae4-a2c979e43184";
-
-              self.isLoaded = true;
-
-              const createEdgeConfig = await fetch(
-                "https://api.vercel.com/v1/edge-config/ecfg_jkh3mkuexoduiizm1e3vy7djlddp/items",
-                {
-                  method: "GET",
-                  headers: {
-                    Authorization: `Bearer ExEfYwbmDwqFWQITdcRtAo0t`,
-                    "Content-Type": "application/json",
-                  },
-                }
-              );
-
-              const result = await createEdgeConfig.json();
-
-              self.titulo = self.getData(result, "titulo");
-              self.sub_titulo = self.getData(result, "sub_titulo");
-              self.idade_gestacional = self.getData(
-                result,
-                "idade_gestacional"
-              );
-              self.dilatacao_do_colo_do_utero = self.getData(
-                result,
-                "dilatacao_do_colo_do_utero"
-              );
-              self.sinais_e_sintomas_naturais_esperados = self.getData(
-                result,
-                "sinais_e_sintomas_naturais_esperados"
-              );
-              self.alter_aco_es_emocionais_na_mae = self.getData(
-                result,
-                "alter_aco_es_emocionais_na_mae"
-              );
-              self.ajuda_do_acompanhante = self.getData(
-                result,
-                "ajuda_do_acompanhante"
-              );
-              self.a_mae_deve_se_alimentar_bem = self.getData(
-                result,
-                "a_mae_deve_se_alimentar_bem"
-              );
-              self.algumas_posicoes_durante_o_trabalho_de_parto = self.getData(
-                result,
-                "algumas_posicoes_durante_o_trabalho_de_parto"
-              );
-              self.amamentacao_1 = self.getData(result, "amamentacao_1");
-              self.contato_pele_a_pele = self.getData(
-                result,
-                "contato_pele_a_pele"
-              );
-            } catch (error) {
-              console.log(error);
-            } finally {
-              self.isLoaded = false;
-            }
-          })();
-        },
-        methods: {
-          getData(data, name) {
-            return data.find((el) => el.key === name).value;
-          },
-        },
-      });
-    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="public/js/app.js"></script>
   </body>
 </html>

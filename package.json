@@ -1,0 +1,31 @@
+{
+  "name": "www.partocomapoio.vercel.app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "hot": "npx mix watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaffarelXavier/partocomapoio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaffarelXavier/partocomapoio/issues"
+  },
+  "homepage": "https://github.com/TaffarelXavier/partocomapoio#readme",
+  "dependencies": {
+    "@splidejs/vue-splide": "^0.6.12",
+    "tw-elements": "^1.0.0-beta2",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.43",
+    "vue-loader": "^15.9.8",
+    "vue-template-compiler": "^2.6.14"
+  }
+}
