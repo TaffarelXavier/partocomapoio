@@ -86,6 +86,17 @@ var render = function render() {
         src: image.src,
         alt: index
       }
+    }), _vm._v(" "), _c("span", {
+      directives: [{
+        name: "show",
+        rawName: "v-show",
+        value: image.fonte,
+        expression: "image.fonte"
+      }],
+      staticClass: "block w-full text-right text-xs mt-2",
+      domProps: {
+        innerHTML: _vm._s(image.fonte)
+      }
     })]);
   }), 0), _vm._v(" "), _vm.images.length > 1 ? _c("button", {
     staticClass: "carousel-control-prev",
@@ -12345,10 +12356,12 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
     images: {
       introducao: [{
         id: 0,
-        src: "assets/introducao/1.jpeg"
+        src: "assets/introducao/1.jpeg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/introducao/2.jpeg"
+        src: "assets/introducao/2.jpeg",
+        fonte: "Fonte: Google/2023"
       }],
       idade_gestacional: [{
         id: 0,
@@ -12356,89 +12369,114 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
       }],
       dilatacao_do_colo_do_utero: [{
         id: 0,
-        src: "assets/dilatacao/1.png"
+        src: "assets/dilatacao/1.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/dilatacao/2.png"
+        src: "assets/dilatacao/2.png",
+        fonte: "Fonte: Google/2023"
       }],
       sinais_e_sintomas_naturais_esperados: [{
         id: 0,
         src: "assets/image007.jpg"
       }, {
         id: 1,
-        src: "assets/sinais-e-sintomas/1.jpg"
+        src: "assets/sinais-e-sintomas/1.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/sinais-e-sintomas/2.jpg"
+        src: "assets/sinais-e-sintomas/2.jpg",
+        fonte: "Fonte: Google/2023"
       }],
       alteracoes_emocionais_na_mae: [{
         id: 0,
-        src: "assets/image009.jpg"
+        src: "assets/image009.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/emocoes/1.jpeg"
+        src: "assets/emocoes/1.jpeg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/emocoes/2.jpeg"
+        src: "assets/emocoes/2.jpeg",
+        fonte: "Fonte: Google/2023"
       }],
       ajuda_do_acompanhante: [{
         id: 0,
-        src: "assets/marido_esposa_gravida.png"
+        src: "assets/marido_esposa_gravida.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/acompanhante/1.jpg"
+        src: "assets/acompanhante/1.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/acompanhante/massagem.webp"
+        src: "assets/acompanhante/massagem.webp",
+        fonte: "Fonte: Google/2023"
       }],
       a_mae_deve_se_alimentar_bem: [{
         id: 0,
-        src: "assets/image013.jpg"
+        src: "assets/image013.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/alimentacao/1.jpeg"
+        src: "assets/alimentacao/1.jpeg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/alimentacao/2.jpg"
+        src: "assets/alimentacao/2.jpg",
+        fonte: "Fonte: Google/2023"
       }],
       algumas_posicoes_durante_o_trabalho_de_parto: [{
         id: 0,
-        src: "assets/posicoes/1.jpeg"
+        src: "assets/posicoes/1.jpeg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/posicoes/2.jpeg"
+        src: "assets/posicoes/2.jpeg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/posicoes/3.jpg"
+        src: "assets/posicoes/3.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 3,
-        src: "assets/posicoes/4.jpg"
+        src: "assets/posicoes/4.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 4,
-        src: "assets/posicoes/4.png"
+        src: "assets/posicoes/4.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 5,
-        src: "assets/posicoes/5.png"
+        src: "assets/posicoes/5.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 6,
-        src: "assets/posicoes/6.jpg"
+        src: "assets/posicoes/6.jpg",
+        fonte: "Fonte: Google/2023"
       }],
       amamentacao: [{
         id: 0,
-        src: "assets/image017.png"
+        src: "assets/image017.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/amamentacao/1.png"
+        src: "assets/amamentacao/1.png",
+        fonte: "Fonte: Google/2023"
       }],
       contato_pele_a_pele: [{
         id: 0,
-        src: "assets/image020.png"
+        src: "assets/image020.png",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
-        src: "assets/contato-pele-a-pele/1.jpg"
+        src: "assets/contato-pele-a-pele/1.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 2,
-        src: "assets/contato-pele-a-pele/2.png"
+        src: "assets/contato-pele-a-pele/2.png",
+        fonte: "Fonte: Google/2023"
       }]
     }
   },

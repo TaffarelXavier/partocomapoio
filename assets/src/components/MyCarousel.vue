@@ -21,6 +21,7 @@
           :class="{ active: image.id == 0 }"
         >
           <img :src="image.src" :alt="index" class="block w-full w-100 h-80" />
+          <span class="block w-full text-right text-xs mt-2" v-show="image.fonte" v-html="image.fonte" />
         </div>
       </div>
       <button
@@ -34,7 +35,7 @@
         <span class="visually-hidden" v-if="buttonsVisible">Anterior</span>
       </button>
       <button
-       v-if="images.length > 1"
+        v-if="images.length > 1"
         class="carousel-control-next"
         type="button"
         :data-bs-target="'#' + id"
@@ -63,7 +64,7 @@ export default {
     const self = this;
     this.id = this.myid;
     setTimeout(() => {
-        self.buttonsVisible = false;
+      self.buttonsVisible = false;
     }, 1000);
   },
   methods: {},
