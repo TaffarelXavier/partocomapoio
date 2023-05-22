@@ -38,7 +38,8 @@ var app = new Vue({
       ],
       ajuda_do_acompanhante: [
         { id: 0, src: "assets/marido_esposa_gravida.png" },
-        { id: 1, src: "assets/acompanhate/1.jpg" },
+        { id: 1, src: "assets/acompanhante/1.jpg" },
+        { id: 2, src: "assets/acompanhante/massagem.webp" },
       ],
       a_mae_deve_se_alimentar_bem: [
         { id: 0, src: "assets/image013.jpg" },

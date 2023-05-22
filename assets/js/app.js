@@ -12383,7 +12383,10 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
         src: "assets/marido_esposa_gravida.png"
       }, {
         id: 1,
-        src: "assets/acompanhate/1.jpg"
+        src: "assets/acompanhante/1.jpg"
+      }, {
+        id: 2,
+        src: "assets/acompanhante/massagem.webp"
       }],
       a_mae_deve_se_alimentar_bem: [{
         id: 0,
