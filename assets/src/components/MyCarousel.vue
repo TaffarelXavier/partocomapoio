@@ -12,18 +12,6 @@
           aria-current="true"
           :aria-label="'Slide' + (image.id + 1)"
         ></button>
-        <!-- <button
-          type="button"
-          :data-bs-target="'#' + id"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          :data-bs-target="'#' + id"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button> -->
       </div>
       <div class="carousel-inner">
         <div
@@ -32,18 +20,8 @@
           class="carousel-item"
           :class="{ active: image.id == 0 }"
         >
-          <img :src="image.src" :alt="index" class="d-block w-100 h-96" />
+          <img :src="image.src" :alt="index" class="d-block w-100 h-80" />
         </div>
-        <!-- <div class="carousel-item">
-          <img src="assets/image002.jpg" class="d-block w-100 h-96" alt="..." />
-        </div>
-        <div class="carousel-item">
-          <img
-            src="assets/background.png"
-            class="d-block w-100 h-96"
-            alt="..."
-          />
-        </div> -->
       </div>
       <button
         v-if="images.length > 1"

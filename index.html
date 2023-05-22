@@ -87,11 +87,11 @@
         background-size: 100% 100% !important;
         background-position: 500px 100%;
         opacity: 1;
-        padding:0 !important;
+        padding: 0 !important;
         margin: 0 !important;
       }
-      h1{
-        margin:0 !important;
+      h1 {
+        margin: 0 !important;
       }
     </style>
   </head>
@@ -105,7 +105,7 @@
           :class="{'hidden': !isLoaded}"
           class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-40"
         >
-          <h1 class="text-3xl  text-gray-900">Carregando...</h1>
+          <h1 class="text-3xl text-gray-900">Carregando...</h1>
         </div>
 
         <div class="pl-5 pr-5 md:pl-60 md:pr-60" :class="{'hidden': isLoaded}">
@@ -173,8 +173,14 @@
             </h1>
             <div class="grid grid-cols-4 mt-5">
               <div class="col-span-4 md:col-span-2 text-center">
-                <!-- <h1 class="text-2xl text-gray-500">DILATAÇÃO CERVICAL</h> -->
-                <div
+                <my-carousel
+                  :myid="'carousel_dilatacao'"
+                  :images="[
+                  {id:0, src:'assets/dilatacao/1.png'},
+                  {id:1, src:'assets/dilatacao/2.png'},
+                  ]"
+                ></my-carousel>
+                <!-- <div
                   class="flex flex-wrap justify-center mb-5 sm:mb-0 mt-4 p-2 border-2 rounded-3xl"
                 >
                   <div class="flex flex-wrap gap-3 text-lg">
@@ -309,7 +315,7 @@
                       10 cm
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
               <div
                 class="col-span-4 md:col-span-2 text-xl text-justify md:indent-24 md:pl-5 leading-8"
@@ -375,7 +381,10 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_5'"
-                  :images="[{id:0, src:'assets/marido_esposa_gravida.png'}]"
+                  :images="[
+                  {id:0, src:'assets/marido_esposa_gravida.png'},
+                  {id:1, src:'assets/acompanhate/1.jpg'},
+                  ]"
                 ></my-carousel>
               </div>
               <div
@@ -397,7 +406,11 @@
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
                   :myid="'carousel_6'"
-                  :images="[{id:0, src:'assets/image013.jpg'}]"
+                  :images="[
+                  {id:0, src:'assets/image013.jpg'},
+                  {id:1, src:'assets/alimentacao/1.jpeg'},
+                  {id:2, src:'assets/alimentacao/2.jpg'},
+                  ]"
                 ></my-carousel>
               </div>
               <div

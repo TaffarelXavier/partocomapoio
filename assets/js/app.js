@@ -76,7 +76,7 @@ var render = function render() {
         active: image.id == 0
       }
     }, [_c("img", {
-      staticClass: "d-block w-100 h-96",
+      staticClass: "d-block w-100 h-80",
       attrs: {
         src: image.src,
         alt: index
