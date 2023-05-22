@@ -87,17 +87,25 @@
         background-size: 100% 100% !important;
         background-position: 500px 100%;
         opacity: 1;
+        padding:0 !important;
+        margin: 0 !important;
+      }
+      h1{
+        margin:0 !important;
       }
     </style>
   </head>
-  <body class="mt-4 mix-blend-normal">
-    <div id="app">
+  <body class="mix-blend-normal">
+    <div id="app" class="pt-5">
       <template>
+        <!-- <div id="waves" class="h-20 p-0 m-0">
+
+        </div> -->
         <div
           :class="{'hidden': !isLoaded}"
           class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-40"
         >
-          <h1 class="text-3xl text-gray-900">Carregando...</h1>
+          <h1 class="text-3xl  text-gray-900">Carregando...</h1>
         </div>
 
         <div class="pl-5 pr-5 md:pl-60 md:pr-60" :class="{'hidden': isLoaded}">
@@ -111,7 +119,7 @@
             </div>
           </div>
           <!-- INÍCIO -->
-          <section class="">
+          <section class="" v-if="false">
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
                 <!-- COROUSEL -->
@@ -132,7 +140,7 @@
           </section>
 
           <!-- IDADE GESTACIONAL -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -157,7 +165,7 @@
           </section>
 
           <!-- DILATAÇÃO DO COLO DO ÚTERO -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -311,7 +319,7 @@
             </div>
           </section>
 
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -334,7 +342,7 @@
           </section>
 
           <!-- ALTERAÇÔES EMOCIONAIS NA MÃE -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -357,7 +365,7 @@
           </section>
 
           <!-- AJUDA DO ACOMPANHANTE -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -379,7 +387,7 @@
           </section>
 
           <!-- A MAE DEVE SE ALIMENTAR BEM -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -401,7 +409,7 @@
           </section>
 
           <!-- ALGUMAS POSIÇÔES DURANTE O TRABALHO DE PARTO -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="true">
             <h1
               class="text-center text-xl md:text-2xl font-extrabold text-blue-500"
             >
@@ -411,7 +419,14 @@
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
                   :myid="'carousel_7'"
-                  :images="[{id:0, src:'assets/image015.jpg'}]"
+                  :images="[
+                  {id:0, src:'assets/posicoes/1.jpeg'},
+                  {id:1, src:'assets/posicoes/2.jpeg'},
+                  {id:2, src:'assets/posicoes/6.jpg'},
+                  {id:3, src:'assets/posicoes/3.jpg'},
+                  {id:4, src:'assets/posicoes/4.png'},
+                  {id:5, src:'assets/posicoes/5.png'}
+                  ]"
                 ></my-carousel>
               </div>
               <div
@@ -423,7 +438,7 @@
           </section>
 
           <!-- AMAMENTAÇÃO -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
@@ -433,7 +448,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_8'"
-                  :images="[{id:0, src:'assets/image017.png'}]"
+                  :images="[{id:0, src:'assets/image017.png'},{id:1, src: 'assets/amamentacao/1.png'}]"
                 ></my-carousel>
               </div>
               <div
@@ -445,7 +460,7 @@
           </section>
 
           <!-- CONTATO PELE A PELE -->
-          <section class="mt-10">
+          <section class="mt-10" v-if="false">
             <h1
               class="text-center text-lg md:text-2xl font-extrabold text-blue-500"
             >
