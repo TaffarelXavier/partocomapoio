@@ -98,9 +98,6 @@
   <body class="mix-blend-normal">
     <div id="app" class="pt-5">
       <template>
-        <!-- <div id="waves" class="h-20 p-0 m-0">
-
-        </div> -->
         <div
           :class="{'hidden': !isLoaded}"
           class="fixed top-0 left-0 w-screen h-screen flex items-center justify-center bg-black bg-opacity-40"
@@ -125,9 +122,7 @@
                 <!-- COROUSEL -->
                 <my-carousel
                   :myid="'carousel_1'"
-                  :images="[
-                  {id:0, src:'assets/introducao/1.jpeg'},
-                  {id:1, src:'assets/introducao/2.jpeg'}]"
+                  :images="images.introducao"
                 ></my-carousel>
               </div>
 
@@ -150,7 +145,7 @@
               <div class="col-span-6 md:col-span-6 mb-4">
                 <my-carousel
                   :myid="'carousel_2'"
-                  :images="[{id:0, src:'assets/cardeneta.png'}]"
+                  :images="images.idade_gestacional"
                 ></my-carousel>
                 <div class="text-right font-extrabold text-sm text-gray-600">
                   Caderneta da Gestante – Ministério da Saúde/2022
@@ -175,10 +170,7 @@
               <div class="col-span-4 md:col-span-2 text-center">
                 <my-carousel
                   :myid="'carousel_dilatacao'"
-                  :images="[
-                  {id:0, src:'assets/dilatacao/1.png'},
-                  {id:1, src:'assets/dilatacao/2.png'},
-                  ]"
+                  :images="images.dilatacao_do_colo_do_utero"
                 ></my-carousel>
                 <!-- <div
                   class="flex flex-wrap justify-center mb-5 sm:mb-0 mt-4 p-2 border-2 rounded-3xl"
@@ -335,8 +327,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_3'"
-                  :images="[
-                  {id:0, src:'assets/image007.jpg'}]"
+                  :images="images.sinais_e_sintomas_naturais_esperados"
                 ></my-carousel>
               </div>
               <div
@@ -358,8 +349,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_4'"
-                  :images="[{id:0, src:'assets/image009.jpg'}, {id:1, src:'assets/emocoes/1.jpeg'},
-                  {id:2, src:'assets/emocoes/2.jpeg'}]"
+                  :images="images.alteracoes_emocionais_na_mae"
                 ></my-carousel>
               </div>
               <div
@@ -381,10 +371,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_5'"
-                  :images="[
-                  {id:0, src:'assets/marido_esposa_gravida.png'},
-                  {id:1, src:'assets/acompanhate/1.jpg'},
-                  ]"
+                  :images="images.ajuda_do_acompanhante"
                 ></my-carousel>
               </div>
               <div
@@ -406,11 +393,7 @@
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
                   :myid="'carousel_6'"
-                  :images="[
-                  {id:0, src:'assets/image013.jpg'},
-                  {id:1, src:'assets/alimentacao/1.jpeg'},
-                  {id:2, src:'assets/alimentacao/2.jpg'},
-                  ]"
+                  :images="images.a_mae_deve_se_alimentar_bem"
                 ></my-carousel>
               </div>
               <div
@@ -432,14 +415,7 @@
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
                   :myid="'carousel_7'"
-                  :images="[
-                  {id:0, src:'assets/posicoes/1.jpeg'},
-                  {id:1, src:'assets/posicoes/2.jpeg'},
-                  {id:2, src:'assets/posicoes/6.jpg'},
-                  {id:3, src:'assets/posicoes/3.jpg'},
-                  {id:4, src:'assets/posicoes/4.png'},
-                  {id:5, src:'assets/posicoes/5.png'}
-                  ]"
+                  :images="images.algumas_posicoes_durante_o_trabalho_de_parto"
                 ></my-carousel>
               </div>
               <div
@@ -461,7 +437,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_8'"
-                  :images="[{id:0, src:'assets/image017.png'},{id:1, src: 'assets/amamentacao/1.png'}]"
+                  :images="images.amamentacao"
                 ></my-carousel>
               </div>
               <div
@@ -483,7 +459,7 @@
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
                   :myid="'carousel_9'"
-                  :images="[{id:0, src:'assets/image020.png'}]"
+                  :images="images.contato_pele_a_pele"
                 ></my-carousel>
               </div>
               <div

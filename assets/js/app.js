@@ -19,11 +19,16 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      id: null
+      id: null,
+      buttonsVisible: true
     };
   },
   mounted: function mounted() {
+    var self = this;
     this.id = this.myid;
+    setTimeout(function () {
+      self.buttonsVisible = false;
+    }, 1000);
   },
   methods: {}
 });
@@ -76,7 +81,7 @@ var render = function render() {
         active: image.id == 0
       }
     }, [_c("img", {
-      staticClass: "d-block w-100 h-80",
+      staticClass: "block w-full w-100 h-80",
       attrs: {
         src: image.src,
         alt: index
@@ -94,9 +99,9 @@ var render = function render() {
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v(" "), _c("span", {
+  }), _vm._v(" "), _vm.buttonsVisible ? _c("span", {
     staticClass: "visually-hidden"
-  }, [_vm._v("Anterior")])]) : _vm._e(), _vm._v(" "), _vm.images.length > 1 ? _c("button", {
+  }, [_vm._v("Anterior")]) : _vm._e()]) : _vm._e(), _vm._v(" "), _vm.images.length > 1 ? _c("button", {
     staticClass: "carousel-control-next",
     attrs: {
       type: "button",
@@ -108,9 +113,9 @@ var render = function render() {
     attrs: {
       "aria-hidden": "true"
     }
-  }), _vm._v(" "), _c("span", {
+  }), _vm._v(" "), _vm.buttonsVisible ? _c("span", {
     staticClass: "visually-hidden"
-  }, [_vm._v("Próximo")])]) : _vm._e()])]);
+  }, [_vm._v("Próximo")]) : _vm._e()]) : _vm._e()])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;
@@ -12322,7 +12327,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
   el: "#app",
   components: {
-    'my-carousel': _components_MyCarousel_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    "my-carousel": _components_MyCarousel_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   data: {
     titulo: "",
@@ -12336,7 +12341,97 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
     algumas_posicoes_durante_o_trabalho_de_parto: "",
     amamentacao_1: "",
     contato_pele_a_pele: "",
-    isLoaded: true
+    isLoaded: true,
+    images: {
+      introducao: [{
+        id: 0,
+        src: "assets/introducao/1.jpeg"
+      }, {
+        id: 1,
+        src: "assets/introducao/2.jpeg"
+      }],
+      idade_gestacional: [{
+        id: 0,
+        src: "assets/cardeneta.png"
+      }],
+      dilatacao_do_colo_do_utero: [{
+        id: 0,
+        src: "assets/dilatacao/1.png"
+      }, {
+        id: 1,
+        src: "assets/dilatacao/2.png"
+      }],
+      sinais_e_sintomas_naturais_esperados: [{
+        id: 0,
+        src: "assets/image007.jpg"
+      }, {
+        id: 1,
+        src: "assets/sinais-e-sintomas/1.jpg"
+      }],
+      alteracoes_emocionais_na_mae: [{
+        id: 0,
+        src: "assets/image009.jpg"
+      }, {
+        id: 1,
+        src: "assets/emocoes/1.jpeg"
+      }, {
+        id: 2,
+        src: "assets/emocoes/2.jpeg"
+      }],
+      ajuda_do_acompanhante: [{
+        id: 0,
+        src: "assets/marido_esposa_gravida.png"
+      }, {
+        id: 1,
+        src: "assets/acompanhate/1.jpg"
+      }],
+      a_mae_deve_se_alimentar_bem: [{
+        id: 0,
+        src: "assets/image013.jpg"
+      }, {
+        id: 1,
+        src: "assets/alimentacao/1.jpeg"
+      }, {
+        id: 2,
+        src: "assets/alimentacao/2.jpg"
+      }],
+      algumas_posicoes_durante_o_trabalho_de_parto: [{
+        id: 0,
+        src: "assets/posicoes/1.jpeg"
+      }, {
+        id: 1,
+        src: "assets/posicoes/2.jpeg"
+      }, {
+        id: 2,
+        src: "assets/posicoes/6.jpg"
+      }, {
+        id: 3,
+        src: "assets/posicoes/3.jpg"
+      }, {
+        id: 4,
+        src: "assets/posicoes/4.png"
+      }, {
+        id: 5,
+        src: "assets/posicoes/5.png"
+      }],
+      amamentacao: [{
+        id: 0,
+        src: "assets/image017.png"
+      }, {
+        id: 1,
+        src: "assets/amamentacao/1.png"
+      }],
+      contato_pele_a_pele: [{
+        id: 0,
+        src: "assets/image020.png"
+      }, {
+        id: 1,
+        src: "assets/contato-pele-a-pele/1.jpg"
+      }, {
+        id: 2,
+        src: "assets/contato-pele-a-pele/2.png"
+      }]
+    }
   },
   mounted: function mounted() {
     var self = this;

@@ -20,7 +20,7 @@
           class="carousel-item"
           :class="{ active: image.id == 0 }"
         >
-          <img :src="image.src" :alt="index" class="d-block w-100 h-80" />
+          <img :src="image.src" :alt="index" class="block w-full w-100 h-80" />
         </div>
       </div>
       <button
@@ -31,7 +31,7 @@
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Anterior</span>
+        <span class="visually-hidden" v-if="buttonsVisible">Anterior</span>
       </button>
       <button
        v-if="images.length > 1"
@@ -41,7 +41,7 @@
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Próximo</span>
+        <span class="visually-hidden" v-if="buttonsVisible">Próximo</span>
       </button>
     </div>
   </div>
@@ -56,10 +56,15 @@ export default {
   data() {
     return {
       id: null,
+      buttonsVisible: true,
     };
   },
   mounted() {
+    const self = this;
     this.id = this.myid;
+    setTimeout(() => {
+        self.buttonsVisible = false;
+    }, 1000);
   },
   methods: {},
 };
