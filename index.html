@@ -13,6 +13,10 @@
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/tw-elements.min.css"
     />
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-5.0.2/dist/css/bootstrap.css"
+    />
     <script>
       tailwind.config = {
         darkMode: "class",
@@ -31,6 +35,7 @@
     <title>
       Informações básicas para o acompanhamento durante o trabalho de parto
     </title>
+
     <meta
       name="description"
       content="O trabalho de parto é um processo fisiológico individual e natural que ocorre em cada mulher. Durante ele, o corpo da mulher é envolvido numa série de alterações físicas, emocionais e hormonais, promovendo um preparo no corpo dela, para o nascimento do bebê. Saiba como acompanhar cada passo desse processo e cooperar para uma assistência de qualidade à mãe e ao bebê."
@@ -55,6 +60,27 @@
       content="https://partocomapoio.vercel.app/index_copy.html"
     />
     <meta property="og:type" content="website" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
     <style>
       body {
         background: url(./assets/background.png) no-repeat;
@@ -73,11 +99,12 @@
         >
           <h1 class="text-3xl text-gray-900">Carregando...</h1>
         </div>
+
         <div class="pl-5 pr-5 md:pl-60 md:pr-60" :class="{'hidden': isLoaded}">
           <div class="bg-white">
             <div class="text-center">
               <h1
-                class="text-2xl font-bold tracking-tight text-gray-900 bg-gray-200"
+                class="text-2xl pt-2 pb-2 font-bold tracking-tight text-gray-900 bg-gray-200"
               >
                 {{ titulo }}
               </h1>
@@ -89,8 +116,9 @@
               <div class="col-span-5 md:col-span-2">
                 <!-- COROUSEL -->
                 <my-carousel
-                  id="carousel_1"
-                  :images="[{id:0, src:'assets/introducao/1.jpeg'},
+                  :myid="'carousel_1'"
+                  :images="[
+                  {id:0, src:'assets/introducao/1.jpeg'},
                   {id:1, src:'assets/introducao/2.jpeg'}]"
                 ></my-carousel>
               </div>
@@ -113,7 +141,7 @@
             <div class="grid grid-cols-6 mt-5">
               <div class="col-span-6 md:col-span-6 mb-4">
                 <my-carousel
-                  id="carousel_2"
+                  :myid="'carousel_2'"
                   :images="[{id:0, src:'assets/cardeneta.png'}]"
                 ></my-carousel>
                 <div class="text-right font-extrabold text-sm text-gray-600">
@@ -292,7 +320,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
-                  id="carousel_3"
+                  :myid="'carousel_3'"
                   :images="[
                   {id:0, src:'assets/image007.jpg'}]"
                 ></my-carousel>
@@ -315,7 +343,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
-                  id="carousel_4"
+                  :myid="'carousel_4'"
                   :images="[{id:0, src:'assets/image009.jpg'}, {id:1, src:'assets/emocoes/1.jpeg'},
                   {id:2, src:'assets/emocoes/2.jpeg'}]"
                 ></my-carousel>
@@ -338,7 +366,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
-                  id="carousel_5"
+                  :myid="'carousel_5'"
                   :images="[{id:0, src:'assets/marido_esposa_gravida.png'}]"
                 ></my-carousel>
               </div>
@@ -360,7 +388,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
-                  id="carousel_6"
+                  :myid="'carousel_6'"
                   :images="[{id:0, src:'assets/image013.jpg'}]"
                 ></my-carousel>
               </div>
@@ -382,7 +410,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-1">
                 <my-carousel
-                  id="carousel_7"
+                  :myid="'carousel_7'"
                   :images="[{id:0, src:'assets/image015.jpg'}]"
                 ></my-carousel>
               </div>
@@ -402,16 +430,16 @@
               AMAMENTAÇÃO
             </h1>
             <div class="grid grid-cols-5 mt-5">
+              <div class="col-span-5 md:col-span-2">
+                <my-carousel
+                  :myid="'carousel_8'"
+                  :images="[{id:0, src:'assets/image017.png'}]"
+                ></my-carousel>
+              </div>
               <div
                 class="col-span-5 md:col-span-3 text-xl text-justify md:indent-24 leading-8"
               >
                 {{amamentacao_1}}
-              </div>
-              <div class="col-span-5 md:col-span-2">
-                <my-carousel
-                  id="carousel_8"
-                  :images="[{id:0, src:'assets/image017.png'}]"
-                ></my-carousel>
               </div>
             </div>
           </section>
@@ -426,7 +454,7 @@
             <div class="grid grid-cols-5 mt-5">
               <div class="col-span-5 md:col-span-2">
                 <my-carousel
-                  id="carousel_9"
+                  :myid="'carousel_9'"
                   :images="[{id:0, src:'assets/image020.png'}]"
                 ></my-carousel>
               </div>
@@ -455,11 +483,11 @@
                   />
                 </a>
               </p>
-              <p class="text-xs">Pós-Graduação em Saúde Coletiva em Saúde da Família</p>
-              <p class="text-xs">Orientador: Dhonel Oliveira da Silva</p>
               <p class="text-xs">
-                Pós-Graduanda: Iara Brito de Sousa Xavier
+                Pós-Graduação em Saúde Coletiva em Saúde da Família
               </p>
+              <p class="text-xs">Orientador: Dhonel Oliveira da Silva</p>
+              <p class="text-xs">Pós-Graduanda: Iara Brito de Sousa Xavier</p>
               <p class="text-xs">Augustinópolis-TO / 2023</p>
               <p class="mt-5 text-xs">
                 Créditos ao meu esposo —
@@ -476,8 +504,8 @@
         </footer>
       </template>
     </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script src="assets/bootstrap-5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script> -->
     <script src="assets/js/app.js"></script>
   </body>
 </html>
