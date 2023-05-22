@@ -28,7 +28,7 @@ var app = new Vue({
         { id: 1, src: "assets/dilatacao/2.png", fonte:"Fonte: Google/2023"  },
       ],
       sinais_e_sintomas_naturais_esperados: [
-        { id: 0, src: "assets/image007.jpg" },
+        { id: 0, src: "assets/image007.jpg", fonte:"Fonte: Google/2023"  },
         { id: 1, src: "assets/sinais-e-sintomas/1.jpg", fonte:"Fonte: Google/2023"  },
         { id: 2, src: "assets/sinais-e-sintomas/2.jpg", fonte:"Fonte: Google/2023"  },
       ],

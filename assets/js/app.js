@@ -12378,7 +12378,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
       }],
       sinais_e_sintomas_naturais_esperados: [{
         id: 0,
-        src: "assets/image007.jpg"
+        src: "assets/image007.jpg",
+        fonte: "Fonte: Google/2023"
       }, {
         id: 1,
         src: "assets/sinais-e-sintomas/1.jpg",
