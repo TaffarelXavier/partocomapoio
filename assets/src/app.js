@@ -50,10 +50,11 @@ var app = new Vue({
       algumas_posicoes_durante_o_trabalho_de_parto: [
         { id: 0, src: "assets/posicoes/1.jpeg" },
         { id: 1, src: "assets/posicoes/2.jpeg" },
-        { id: 2, src: "assets/posicoes/6.jpg" },
-        { id: 3, src: "assets/posicoes/3.jpg" },
+        { id: 2, src: "assets/posicoes/3.jpg" },
+        { id: 3, src: "assets/posicoes/4.jpg" },
         { id: 4, src: "assets/posicoes/4.png" },
         { id: 5, src: "assets/posicoes/5.png" },
+        { id: 6, src: "assets/posicoes/6.jpg" },
       ],
       amamentacao: [
         { id: 0, src: "assets/image017.png" },

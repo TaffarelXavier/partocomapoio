@@ -12409,16 +12409,19 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
         src: "assets/posicoes/2.jpeg"
       }, {
         id: 2,
-        src: "assets/posicoes/6.jpg"
+        src: "assets/posicoes/3.jpg"
       }, {
         id: 3,
-        src: "assets/posicoes/3.jpg"
+        src: "assets/posicoes/4.jpg"
       }, {
         id: 4,
         src: "assets/posicoes/4.png"
       }, {
         id: 5,
         src: "assets/posicoes/5.png"
+      }, {
+        id: 6,
+        src: "assets/posicoes/6.jpg"
       }],
       amamentacao: [{
         id: 0,
