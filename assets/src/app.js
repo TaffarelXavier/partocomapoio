@@ -30,6 +30,7 @@ var app = new Vue({
       sinais_e_sintomas_naturais_esperados: [
         { id: 0, src: "assets/image007.jpg" },
         { id: 1, src: "assets/sinais-e-sintomas/1.jpg" },
+        { id: 2, src: "assets/sinais-e-sintomas/2.jpg" },
       ],
       alteracoes_emocionais_na_mae: [
         { id: 0, src: "assets/image009.jpg" },

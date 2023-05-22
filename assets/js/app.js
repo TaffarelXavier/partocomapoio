@@ -12367,6 +12367,9 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1__["default"]({
       }, {
         id: 1,
         src: "assets/sinais-e-sintomas/1.jpg"
+      }, {
+        id: 2,
+        src: "assets/sinais-e-sintomas/2.jpg"
       }],
       alteracoes_emocionais_na_mae: [{
         id: 0,
